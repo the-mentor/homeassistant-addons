@@ -15,7 +15,7 @@
     "ssl:ro"
   ],
   "image": "ghcr.io/dani-garcia/vaultwarden",
-  "version": "1.32.7",
+  "version": "1.33.0",
   "name": "Vaultwarden",
   "options": {},
   "ports": {
