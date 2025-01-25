@@ -25,8 +25,8 @@
     "7277/tcp": "Vaultwarden Web interface"
   },
   "schema": {},
-  "slug": "vaultwarden",
   "startup": "services",
+  "slug": "vaultwarden",
   "upstream": "1.32.7",
   "url": "https://github.com/the-mentor/homeassistant-addons",
   "watchdog":"https://[HOST]:[PORT:7277]/api/alive",
