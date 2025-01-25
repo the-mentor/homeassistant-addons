@@ -1,6 +1,37 @@
 {
   "$schema": "https://docs.renovatebot.com/renovate-schema.json",
-  "extends": [
-    "config:recommended"
+  "rebaseWhen": "behind-base-branch",
+  "dependencyDashboard": true,
+  "labels": ["dependencies", "no-stale"],
+  "commitMessagePrefix": "⬆️",
+  "commitMessageTopic": "{{depName}}",
+  "customManagers": [
+    {
+      "customType": "regex",
+      "fileMatch": ["/config.json$"],
+      "matchStringsStrategy": "any",
+      "matchStrings": [
+        "\"version\": \"(?<currentValue>.*?)\"",
+        "\"upstream\": \"(?<currentValue>.*?)\""
+      ],
+      "depNameTemplate": "vaultwarden/server",
+      "datasourceTemplate": "docker"
+    },
+    {
+      "customType": "regex",
+      "fileMatch": ["/updater.json$"],
+      "matchStringsStrategy": "any",
+      "matchStrings": ["\"upstream_version\": \"(?<currentValue>.*?)\""],
+      "depNameTemplate": "vaultwarden/server",
+      "datasourceTemplate": "docker"
+    }
+  ],
+  "packageRules": [
+    {
+      "matchDatasources": ["docker"],
+      "matchUpdateTypes": ["minor", "patch"],
+      "matchDepNames": ["vaultwarden/server"],
+      "automerge": false
+    }
   ]
 }
