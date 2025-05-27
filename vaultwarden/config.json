@@ -15,7 +15,7 @@
     "ssl:ro"
   ],
   "image": "ghcr.io/dani-garcia/vaultwarden",
-  "version": "1.33.2",
+  "version": "1.34.1",
   "name": "Vaultwarden",
   "options": {},
   "ports": {
@@ -27,7 +27,7 @@
   "schema": {},
   "startup": "services",
   "slug": "vaultwarden",
-  "upstream": "1.33.2",
+  "upstream": "1.34.1",
   "url": "https://github.com/the-mentor/homeassistant-addons",
   "watchdog":"https://[HOST]:[PORT:7277]/api/alive",
   "webui": "https://[HOST]:[PORT:7277]"
