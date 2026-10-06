@@ -6,6 +6,6 @@
     "slug": "vaultwarden",
     "source": "github",
     "upstream_repo": "dani-garcia/vaultwarden",
-    "upstream_version": "1.37.3",
+    "upstream_version": "1.37.4",
     "paused": "false"
   }
